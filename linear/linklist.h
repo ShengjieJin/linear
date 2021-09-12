@@ -3,6 +3,17 @@
 
 // linklist 对话框
 
+class LinkNode//结点类定义
+{
+	friend class linklist;
+public:
+	LinkNode(LinkNode* ptr = NULL) :link(ptr) {}//仅初始化指针
+	LinkNode(const int& item, LinkNode* ptr = NULL) :data(item), link(ptr) {}//初始化数据与指针
+private:
+	int data;//数据元素域
+	LinkNode* link;//链指针域
+};
+
 
 class linklist : public CDialogEx
 {
@@ -35,4 +46,7 @@ public:
 	afx_msg void Insafterawanted();
 	afx_msg void Insafterallwanted();
 	afx_msg void Delrepeat();
+
+protected:
+	LinkNode* first = new LinkNode;//头指针
 };

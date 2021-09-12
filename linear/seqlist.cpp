@@ -29,6 +29,7 @@ seqlist::seqlist(CWnd* pParent /*=nullptr*/)
 
 seqlist::~seqlist()
 {
+	delete[] data;
 }
 
 
@@ -67,7 +68,7 @@ END_MESSAGE_MAP()
 void seqlist::CreateSeqlist()   //创建顺序表
 {
 	// TODO: 在此添加控件通知处理程序代码
-	
+	if (last != -1) { MessageBox(TEXT("已经初始化！")); return; }
 	CString str;
     
 	m_edit.GetWindowText(str);//str接受m_edit的值
