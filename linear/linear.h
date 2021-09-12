@@ -30,3 +30,4 @@ public:
 };
 
 extern ClinearApp theApp;
+#define maxSize 100

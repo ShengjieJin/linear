@@ -34,4 +34,10 @@ public:
 	afx_msg void Show();
 	afx_msg void Insafterawanted();
 	afx_msg void Insafterallwanted();
+
+
+
+	int* data = new int[maxSize];
+	int last = -1;
+
 };
